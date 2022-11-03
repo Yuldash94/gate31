@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+/* font-family: 'Mulish', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+/* font-family: 'Poor Story', cursive; */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+#search {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    font-family: 'Poor Story', cursive;
+}
+#btn {
+    border-radius: 10px;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+    background: #fff;
+    font-family: 'Poor Story', cursive;
+}
+#btn:hover {
+    background-color: #716e6e;
+    color: azure;
+}
+#result {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    align-self: center;
+}
+#result > div {
+    border-radius: 10px;
+    width: 300px;
+    height: 100%;
+    border: 1px solid gray;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    padding: 5px 10px;
+}
+#result > div > h1 {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    font-family: 'Mulish', sans-serif;
+}
+#result > div > p {
+    font-family: 'Playfair Display', serif;
+}
+.checked {
+    background-color: #716e6e;
+    color: azure;
+}
+.hide {
+    visibility: hidden;
+    position: absolute;
+}
+.show {
+    visibility: visible;
+}
+@media (max-width:  1024px) {
+    #result {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:  768px) {
+    #result {
+        grid-template-columns: 1fr;
+    }
+}
